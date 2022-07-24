@@ -20,13 +20,13 @@ function getFriends(req, res) {
 }
 
 function getFriend(req, res) {
-  const { id } = req.params;
-  const friend = model[id];
+  const { friendId } = req.params;
+  const friend = model[friendId];
   if (friend) {
     res.json(friend);
   } else {
     res.status(404).json({
-      message: `No friend found with the id : ${id}`,
+      message: `No friend found with the id : ${friendId}`,
     });
   }
 }
