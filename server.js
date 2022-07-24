@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
   next();
   // actions go here before sending back to the user
   const delta = Date.now() - start;
-  console.log(`${req.method} ${req.url} ${delta}ms`);
+  console.log(`${req.method} ${req.baseUrl}${req.url} ${delta}ms`);
 });
 
 app.use(express.json());
